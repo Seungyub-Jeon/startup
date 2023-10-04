@@ -1,0 +1,28 @@
+.logo {width: 100%;}
+.logo h1 {
+    font-family: 'SUIT', sans-serif;
+    color:#fff;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.body--white .logo h1 {
+    color:#000;
+}
+
+
+@media (max-width: 500px) {
+    .logo {margin-left: 0;}
+}
+@media (max-width: 50px) {
+    .logo {margin-left: 0;}
+}
+@media (max-width: 650px) {
+    .logo {margin-left: 0;}
+}
+@media (max-width: 850px) {
+    .logo {margin-left: 0;}
+}
+@media (max-width: 1210px) {
+    .logo {margin-left: 40px;}
+}
