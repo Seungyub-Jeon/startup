@@ -1,0 +1,26 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "스타트업소개팅",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seungyub-Jeon/startup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seungyub-Jeon/startup/issues"
+  },
+  "homepage": "https://github.com/Seungyub-Jeon/startup#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7"
+  }
+}
