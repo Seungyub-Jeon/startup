@@ -10,19 +10,24 @@
     color:#000;
 }
 
-
-@media (max-width: 500px) {
-    .logo {margin-left: 0;}
-}
-@media (max-width: 50px) {
-    .logo {margin-left: 0;}
-}
-@media (max-width: 650px) {
-    .logo {margin-left: 0;}
+@media (max-width: 1210px) {
+    .logo {margin-left: 0px;}
 }
 @media (max-width: 850px) {
-    .logo {margin-left: 0;}
+    .logo {margin-left: 70px;}
 }
-@media (max-width: 1210px) {
-    .logo {margin-left: 40px;}
+@media (max-width: 650px) {
+    .logo {margin-left: 70px;}
 }
+@media (max-width: 550px) {
+    .logo {margin-left: 46px;}
+}
+@media (max-width: 500px) {
+    .logo {margin-left: 46px;}
+}
+@media (max-width: 450px) {
+    .logo {margin-left: 46px;}
+    
+}
+
+
