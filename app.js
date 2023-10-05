@@ -11,48 +11,39 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-    res.render('home', { pageTitle: 'Home' });
+const defaultRoutes = require('./routes/default');
+app.use('/', defaultRoutes);
+
+const blogRoutes = require('./routes/blog');
+app.use('/blog', blogRoutes);
+
+const shopRoutes = require('./routes/shop');
+app.use('/shop', shopRoutes);
+
+const groupRoutes = require('./routes/group');
+app.use('/groups', groupRoutes);
+
+const membersRoutes = require('./routes/members');
+app.use('/members', membersRoutes);
+
+const coursesRoutes = require('./routes/courses');
+app.use('/courses', coursesRoutes);
+
+const eventsRoutes = require('./routes/events');
+app.use('/events', eventsRoutes);
+
+const freelancersRoutes = require('./routes/freelancers');
+app.use('/freelancers', freelancersRoutes);
+
+app.use(function(req, res, next) {
+    res.status(404).render('404', { pageTitle: 'Page Not Found' });
 });
-app.get('/blog', (req, res) => {
-    res.render('blog', { pageTitle: 'Blog' });
+
+app.use(function(err, req, res, next) {
+    console.error(err.stack);
+    res.status(500).render('500', { pageTitle: 'Internal Server Error' });
 });
-app.get('/blog/blog-page', (req, res) => {
-    res.render('blog-page', { pageTitle: 'blog-page' });
-});
-app.get('/shop', (req, res) => {
-    res.render('shop', { pageTitle: 'Shop' });
-});
-app.get('/shop/product', (req, res) => {
-    res.render('product', { pageTitle: 'product' });
-});
-app.get('/groups', (req, res) => {
-    res.render('groups', { pageTitle: 'Groups' });
-});
-app.get('/groups/group-profile', (req, res) => {
-    res.render('group-profile', { pageTitle: 'group-profile' });
-});
-app.get('/members', (req, res) => {
-    res.render('members', { pageTitle: 'Members' });
-});
-app.get('/members/members-page', (req, res) => {
-    res.render('members-page', { pageTitle: 'members-page' });
-});
-app.get('/courses', (req, res) => {
-    res.render('courses', { pageTitle: 'Courses' });
-});
-app.get('/courses/courses-page', (req, res) => {
-    res.render('courses-page', { pageTitle: 'courses-page' });
-});
-app.get('/events', (req, res) => {
-    res.render('events', { pageTitle: 'Events' });
-});
-app.get('/events/event', (req, res) => {
-    res.render('event', { pageTitle: 'Event' });
-});
-app.get('/freelancers', (req, res) => {
-    res.render('freelancers', { pageTitle: 'freelancers' });
-});
+
 
 
 
