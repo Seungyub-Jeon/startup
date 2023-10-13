@@ -1,0 +1,84 @@
+
+.member {
+    margin-bottom: 120px
+}
+
+@media(max-width: 1210px) {
+    .member {
+        margin-bottom: calc(60px + 60 * ((100vw - 375px) / 835))
+    }
+}
+
+.member__swiper .card-box__poster {
+    max-height: 200px;
+    height: 200px
+}
+
+.card__title span {
+    font-size: 14px;
+}
+.card__suptext{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    height: 1.5em; /* 예를 들어, line-height가 1.5em일 경우 */
+    max-width: 200px;
+
+}
+
+.new-courses-slide a.card__title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    height: 2em; /* 예를 들어, line-height가 1.5em일 경우 */
+}
+
+.card__subtext {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    height: 4.5em; /* 예를 들어, line-height가 1.5em일 경우 */
+}
+
+.member-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 45px
+}
+
+@media(max-width: 1210px) {
+    .member-top {
+        margin-bottom: calc(20px + 25 * ((100vw - 375px) / 835))
+    }
+}
+
+.member_top__title {
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-weight: 600
+}
+
+@media(max-width: 1210px) {
+    .member_top__title {
+        font-size: calc(36px + 28 * ((100vw - 375px) / 835))
+    }
+}
+
+@media(max-width: 1210px) {
+    .member_top__title {
+        line-height: calc(36px + 28 * ((100vw - 375px) / 835))
+    }
+}
