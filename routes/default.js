@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const profiles = await db.getDb().collection('profiles').find().toArray();
     const supports = await db.getDb().collection('StartupSupport').find().toArray();
     const groups = await db.getDb().collection('groups').find().toArray();
-    res.render('home', { pageTitle: 'Home', profiles: profiles, supports: supports, groups: groups, formatDate: formatDateForEJS  });
+    res.render('home', { pageTitle: '아임그린 | 우리는 녹색 지구를 지향합니다.', profiles: profiles, supports: supports, groups: groups, formatDate: formatDateForEJS  });
 
 
 

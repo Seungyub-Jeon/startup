@@ -1,10 +1,27 @@
 .logo {width: 100%;}
 .logo h1 {
+    display: flex;
+    align-items: center;
     font-family: 'SUIT', sans-serif;
     color:#fff;
     font-size: 26px;
     font-weight: 800;
 }
+.logo h1 span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    background-image: url(../images/green_i.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}  
+
+.body--white .logo h1 span {
+    background-image: url(../images/green_b.png);
+} 
 
 .body--white .logo h1 {
     color:#000;

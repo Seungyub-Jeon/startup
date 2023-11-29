@@ -2,7 +2,8 @@ const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 let database;
 async function connect() {
-  const client = await MongoClient.connect("mongodb://ideachef:%40Sy20160430aA@127.0.0.1:27017");
+  // const client = await MongoClient.connect("mongodb://ideachef:%40Sy20160430aA@127.0.0.1:27017");
+  const client = await MongoClient.connect("mongodb://127.0.0.1:27017");
   database = client.db("ideachef");
   console.log("데이터베이스에 성공적으로 연결되었습니다.");
 }
