@@ -1,14 +1,16 @@
 const express = require('express');
 const db = require('../data/database');
 const router = express.Router();
-const { format, parseISO } = require('date-fns');
+const { format, parse } = require('date-fns');
 
 const formatDateForEJS = (dateStr) => {
     try {
-        return format(parseISO(dateStr), 'yyyy-MM-dd');
+        // 'yyyy-MM-dd HH:mm:ss' 형식의 문자열을 Date 객체로 파싱
+        const date = parse(dateStr, 'yyyy-MM-dd HH:mm:ss', new Date());
+        return format(date, 'yyyy-MM-dd');
     } catch (error) {
         console.error("Error formatting date:", error);
-        return dateStr; // 기본적으로 날짜 문자열을 그대로 반환
+        return dateStr; // 오류 발생 시 원래 날짜 문자열 반환
     }
 };
 
